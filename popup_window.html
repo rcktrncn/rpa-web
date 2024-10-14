@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta chraset="utf-8">
+	<title>Popup Window</title>
+</head>
+<body>
+<h1>Popup Window</h1>
+
+<p><button id="clickbutton">Click me</button></p>
+<p id="message"></p>
+
+<script>
+window.addEventListener("load", (event) => {
+  document.getElementById("clickbutton").addEventListener("click", () => {
+      document.getElementById("message").append(document.createTextNode(Math.floor(Math.random() * 100)));
+    }
+  );
+});
+</script>
+
+</body>
+</html>

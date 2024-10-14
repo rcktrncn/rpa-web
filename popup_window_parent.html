@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta chraset="utf-8">
+	<title>Popup Window Parent</title>
+</head>
+<body>
+<h1>Popup Window Parent</h1>
+
+<p>This page is Popup window parent page.</p>
+
+<p><button id="popupbutton">Click me</button></p>
+
+<hr>
+
+<p><a href="index.html">Back to Home</a></p>
+
+<script>
+window.addEventListener("load", (event) => {
+  document.getElementById("popupbutton").addEventListener("click", () => {
+      window.open("popup_window.html", "popupwindow", "width=320,height=480");
+    }
+  );
+});
+</script>
+
+</body>
+</html>
