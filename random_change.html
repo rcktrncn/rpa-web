@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta chraset="utf-8">
+	<title>Random Change</title>
+</head>
+<body>
+<h1>Random Change</h1>
+
+<p>Random Change Value. Please Reload page.</p>
+
+<p id="changevalue"></p>
+
+<hr>
+
+<p><a href="index.html">Back to Home</a></p>
+
+<script>
+window.addEventListener("load", (event) => {
+    const p = document.getElementById("changevalue");
+    for (let i = p.children - 1; i >= 0; i--) {
+      p.removeChild(i);
+    }
+    p.appendChild(document.createTextNode(Math.floor(Math.random() * 100)));
+});
+</script>
+
+</body>
+</html>
