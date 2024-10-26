@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta chraset="utf-8">
+	<title>Apper Button</title>
+</head>
+<body>
+<h1>Apper Button</h1>
+
+<p>Wait a moment and the button will appear.</p>
+
+<p id="buttonParagraph"></p>
+
+<hr>
+
+<p><a href="index.html">Back to Home</a></p>
+
+<script>
+window.addEventListener("load", () => {
+  const w = (Math.random() * 5000) + 3000;
+  setTimeout(() => {
+    const b = document.createElement("button");
+    b.appendChild(document.createTextNode("Click Me"));
+    b.addEventListener("click", () => {
+      alert("Clicked!");
+    });
+    document.getElementById("buttonParagraph").appendChild(b);
+  }, w);
+});
+</script>
+</body>
+</html>
