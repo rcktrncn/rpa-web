@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta chraset="utf-8">
+	<title>Buttons</title>
+</head>
+<body>
+<h1>Buttons</h1>
+
+<p>Many buttons</p>
+
+<p><input type="text" id="button_clicked" value=""></p>
+
+<p>&quot;Button A&quot; has id=&quot;button-a&quot;<br>
+<button id="button-a">Button A</button></p>
+
+<p>&quot;Button B&quot; has name=&quot;button-b&quot;<br>
+<button name="button-b">Button B</button></p>
+
+<p>&quot;Button C&quot; has class=&quot;button-c&quot;<br>
+<button class="button-c">Button C</button></p>
+
+<p>&quot;Button D&quot; has role=&quot;button-d&quot;<br>
+<button role="button-d">Button D</button></p>
+
+<hr>
+
+<p>&quot;Button E&quot; is wraped span class=&quot;button-e&quot;. &quot;Button F&quot; is wraped span class=&quot;button-f&quot;.<br>
+<span class="button-e"><button>Button E</button></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class="button-f"><button>Button F</button></span></p>
+
+<hr>
+
+<p><a href="index.html">Back to Home</a></p>
+
+<script>
+window.addEventListener("load", () => {
+  const buttons = document.getElementsByTagName("button");
+  for (let i = 0; i < 6; i++) {
+    const elem = buttons[i];
+    //alert(elem.tagName + " " + elem.textContent);
+    elem.addEventListener("click", () => {
+      const me = elem.textContent;
+      document.getElementById("button_clicked").value = me + " is clicked.";
+    });
+  }
+});
+</script>
+</body>
+</html>
